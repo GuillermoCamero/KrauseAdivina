@@ -124,7 +124,7 @@ guessForm.addEventListener("submit", (event) => {
   let loseAnnouncement = document.getElementById("lose-announcement");
   if (!guess.some((value) => value === -1) && guess.length === secure_secretCode.length) {
     if (guess.every((value, index) => value == secure_secretCode[index])) {
-      window.location.replace(window.location.href.replace("game.html", "good_ending.html"));
+      window.location.replace("good_ending.html");
     } 
     else {
       loseAnnouncement.innerHTML = `<p style="font-size: 1.3rem; padding: 5% 0 4%;" class="col-12 text-center">Ups, ${guess.join("")} no era el codigo correcto. Buen intento!</p>`;
